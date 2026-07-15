@@ -1,0 +1,25 @@
+# Phase 1 dependencies
+yfinance>=0.2.40
+pandas>=2.2
+pyarrow>=16.0        # parquet engine for pandas
+numpy>=1.26
+
+# Phase 2 dependencies
+matplotlib>=3.9
+scipy>=1.13
+tabulate>=0.9        # needed for DataFrame.to_markdown()
+
+# Phase 3 (feature engineering) - no new dependencies, reuses pandas/numpy above
+
+# Phase 4 (classical optimization) - no new dependencies; Markowitz and risk
+# parity are implemented directly with scipy.optimize (already installed
+# above for Phase 2), rather than pulling in PyPortfolioOpt/cvxpy, to keep
+# the constrained-optimization logic transparent and testable in this repo.
+
+# Phase 5 dependencies
+# (none new -- backtesting engine reuses pandas/numpy/scipy above)
+
+# Phase 6 dependencies
+gymnasium>=0.29
+stable-baselines3>=2.3
+torch>=2.3

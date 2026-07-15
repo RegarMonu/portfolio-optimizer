@@ -10,3 +10,4 @@ wheels/
 .venv
 data_store/
 test.ipynb
+reports/
